@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 
 const LandingPage = () => {
     return (
+        <Router>
         <div className='landing-wrapper'>
             <Link to='/profile'>
                 <h1>MentorMe</h1>
@@ -22,10 +23,12 @@ const LandingPage = () => {
             </div>
 
             <div className='login-btn'>
-                <Button>Login here!</Button>
+            <Link to="/login"><Button>Login here!</Button></Link>
             </div>
 
         </div>
+        <Route path="/login" component={Login} />
+        </Router>
     )
 }
 
