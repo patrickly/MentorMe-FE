@@ -1,12 +1,23 @@
 import React from 'react';
 import './css/index.css';
 
+import { Route } from 'react-router-dom'
+
 import LandingPage from './components/LandingPage/LandingPage'
+import Profile from './components/Profile/Profile'
 
 function App() {
   return (
     <div className="App">
-      <LandingPage />
+      <Route
+        path='/'
+        exact
+        component={LandingPage}
+      />
+      <Route
+        path='/profile'
+        component={Profile}
+      />
     </div>
   );
 }

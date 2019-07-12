@@ -1,11 +1,13 @@
 import React from 'react'
 import { Button } from 'reactstrap'
+import { Link } from 'react-router-dom'
 
 const LandingPage = () => {
     return (
         <div className='landing-wrapper'>
-
-            <h1>MentorMe</h1>
+            <Link to='/profile'>
+                <h1>MentorMe</h1>
+            </Link>
 
             <div className='headline'>
                 <h4>Connecting mentors and menties locally and globally . . .</h4>
