@@ -5,6 +5,8 @@ import { Route } from 'react-router-dom'
 
 import LandingPage from './components/LandingPage/LandingPage'
 import Profile from './components/Profile/Profile'
+import Login from './components/Login/Login'
+import Signup from './components/SignUp/Signup'
 
 function App() {
   return (
@@ -17,6 +19,14 @@ function App() {
       <Route
         path='/profile'
         component={Profile}
+      />
+      <Route
+        path='/login'
+        component={Login}
+      />
+      <Route
+        path='/signup'
+        component={Signup}
       />
     </div>
   );
