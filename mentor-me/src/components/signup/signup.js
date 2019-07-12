@@ -1,5 +1,6 @@
 import React from 'react'
-import { Button } from 'reactstrap'
+import { Button } from 'reactstrap';
+import { Link } from "react-router-dom";
 
 class Signup extends React.Component {
     render() {
@@ -24,7 +25,7 @@ class Signup extends React.Component {
                 </form>
 
                 <div className='login-btn'>
-                <Button>Register</Button>
+                <Link to="/signup"><Button>Register!</Button></Link> 
             </div>
               
     

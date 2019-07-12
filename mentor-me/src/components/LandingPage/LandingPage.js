@@ -1,11 +1,9 @@
 import React from 'react'
 import { Button } from 'reactstrap'
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import Login from '../Login/login';
+import { Link } from "react-router-dom";
 
 const LandingPage = () => {
     return (
-        <Router>
         <div className='landing-wrapper'>
 
             <h1>MentorMe</h1>
@@ -27,8 +25,7 @@ const LandingPage = () => {
             </div>
 
         </div>
-        <Route path="/login" component={Login} />
-        </Router>
+
     )
 }
 
