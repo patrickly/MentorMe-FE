@@ -1,15 +1,33 @@
 import React from 'react';
 import './css/index.css';
-import Login from './components/Login/login';
+
+import { Route } from 'react-router-dom'
+
 import LandingPage from './components/LandingPage/LandingPage'
-import Signup from './components/signup/signup'
+import Profile from './components/Profile/Profile'
+import Login from './components/Login/Login'
+import Signup from './components/SignUp/Signup'
 
 function App() {
   return (
     <div className="App">
-      <LandingPage />
-      {/* <Login /> */}
-      {/* <Signup /> */}
+      <Route
+        path='/'
+        exact
+        component={LandingPage}
+      />
+      <Route
+        path='/profile'
+        component={Profile}
+      />
+      <Route
+        path='/login'
+        component={Login}
+      />
+      <Route
+        path='/signup'
+        component={Signup}
+      />
     </div>
   );
 }

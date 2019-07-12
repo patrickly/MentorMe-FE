@@ -1,34 +1,35 @@
 import React from 'react'
 import { Button } from 'reactstrap'
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import Login from '../Login/login';
+import { Link } from 'react-router-dom'
 
 const LandingPage = () => {
     return (
-        <Router>
         <div className='landing-wrapper'>
-
-            <h1>MentorMe</h1>
+            <Link to='/profile'>
+                <h1>MentorMe</h1>
+            </Link>
 
             <div className='headline'>
                 <h4>Connecting mentors and menties locally and globally . . .</h4>
             </div>
 
-            <div className='signup-btn'>
-                <Button>Sign up now!</Button>
+            <div className='signup'>
+                <Link to="/signup">
+                    <Button className='red-btn'>Sign up now!</Button>
+                </Link>
             </div>
 
             <div className='login-prompt'>
                 <p>Already a member?</p>
             </div>
 
-            <div className='login-btn'>
-            <Link to="/login"><Button>Login here!</Button></Link> 
+            <div className='login'>
+                <Link to="/login">
+                    <Button className='green-btn'>Login here!</Button>
+                </Link>
             </div>
 
         </div>
-        <Route path="/login" component={Login} />
-        </Router>
     )
 }
 

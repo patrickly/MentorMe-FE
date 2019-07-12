@@ -42,47 +42,16 @@
     p {
         color: @DYO_3;
     }
-    button {
-        font-size: 2.6rem;
-        border-radius: 0.6rem;
-        @media (min-width: 470px) {
-            font-size: 3rem;
-        }
-        @media (min-width: 530px) {
-            font-size: 3.4rem;
-        }
-        &:hover {
-            font-size: 3rem;
-            @media (min-width: 470px) {
-                font-size: 3.4rem;
-            }
-            @media (min-width: 530px) {
-                font-size: 3.8rem;
-            }
-        }
-    }
     .headline {
         margin: 0 30px;
     }
-    .signup-btn {
+    .signup {
         margin-bottom: 10px;
-        button {
-            color: @DRD_1;
-            background: @LRD_4;
-            border-color: @DRD_1;
-            &:hover {
-                color: @LRD_4;
-                background: @DRD_1;
-                border-color: @LRD_4;
-                -webkit-animation: sign-up-animation 0.4s linear;
-                        animation: sign-up-animation 0.4s linear;
-            }
-        }
     }
     .login-prompt {
         margin-bottom: 10px;
     }
-    .login-btn {
+    .login {
         margin-bottom: 50px;
         @media (min-width: 470px) {
             margin-bottom: 70px;
@@ -93,129 +62,5 @@
         @media (min-width: 800px) {
             margin-bottom: 180px;
         }
-        button {
-            color: @DGR_1;
-            background: @LGR_4;
-            border-color: @DGR_1;
-            &:hover {
-                color: @LGR_4;
-                background: @DGR_1;
-                border-color: @LGR_4;
-                -webkit-animation: login-animation 0.4s linear;
-                        animation: login-animation 0.4s linear;
-            }
-        }
-    }
-}
-@-webkit-keyframes sign-up-animation {
-    from {
-        color: @DRD_2;
-        background: @LRD_4;
-        border-color: @DRD_2;
-    }
-    to {
-        color: @LRD_4;
-        background: @DRD_2;
-        border-color: @LRD_4;
-    }
-    0% {
-        -webkit-transform: scale(1) rotateZ(0);
-    }
-    50% {
-        -webkit-transform: scale(1.6) rotateZ(180deg);
-    }
-    100% {
-        -webkit-transform: scale(1) rotateZ(360deg);
-    }
-}
-@keyframes sign-up-animation {
-    from {
-        color: @DRD_2;
-        background: @LRD_4;
-        border-color: @DRD_2;
-    }
-    to {
-        color: @LRD_4;
-        background: @DRD_2;
-        border-color: @LRD_4;
-    }
-    0% {
-        transform: scale(1) rotateZ(0);
-    }
-    50% {
-        transform: scale(1.6) rotateZ(180deg);
-    }
-    100% {
-        transform: scale(1) rotateZ(360deg);
-    }
-}
-@-webkit-keyframes login-animation {
-    from {
-        color: @DGR_2;
-        background: @LGR_4;
-        border-color: @DGR_2;
-    }
-    to {
-        color: @LGR_4;
-        background: @DGR_2;
-        border-color: @LGR_4;
-    }
-    0% {
-        -webkit-transform: scale(1) rotateZ(0);
-    }
-    50% {
-        -webkit-transform: scale(1.6) rotateZ(180deg);
-    }
-    100% {
-        -webkit-transform: scale(1) rotateZ(360deg);
-    }
-}
-@keyframes login-animation {
-    from {
-        color: @DGR_2;
-        background: @LGR_4;
-        border-color: @DGR_2;
-    }
-    to {
-        color: @LGR_4;
-        background: @DGR_2;
-        border-color: @LGR_4;
-    }
-    0% {
-        transform: scale(1) rotateZ(0);
-    }
-    50% {
-        transform: scale(1.6) rotateZ(180deg);
-    }
-    100% {
-        transform: scale(1) rotateZ(360deg);
-    }
-}
-@-webkit-keyframes header-animation {
-    0% {
-        -webkit-transform: rotateZ(0);
-        margin-left: 100%;
-    }
-    70% {
-        -webkit-transform: rotateZ(45deg);
-        margin-left: 0;
-    }
-    100% {
-        -webkit-transform: rotateZ(0);
-        margin-left: 0;
-    }
-}
-@keyframes header-animation {
-    0% {
-        transform: rotateZ(0);
-        margin-left: 100%;
-    }
-    75% {
-        transform: rotateZ(45deg);
-        margin-left: -20%;
-    }
-    100% {
-        transform: rotateZ(0);
-        margin-left: 0;
     }
 }
