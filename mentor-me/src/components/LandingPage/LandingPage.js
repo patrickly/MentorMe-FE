@@ -13,7 +13,7 @@ const LandingPage = () => {
             </div>
 
             <div className='signup-btn'>
-                <Button>Sign up now!</Button>
+            <Link to="/signup"><Button>Login here!</Button></Link> 
             </div>
 
             <div className='login-prompt'>
