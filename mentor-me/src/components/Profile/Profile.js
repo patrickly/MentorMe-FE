@@ -1,13 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
+import MenuNav from '../MenuNav/MenuNav'
 
 const Profile = () => {
     return (
         <div>
             <div>
-                <Link to='/'>
-                    <h2>Header</h2>
-                </Link>
+                <MenuNav />
             </div>
             <div>
                 <p>Profile Image</p>

@@ -8,7 +8,7 @@ import Profile from './components/Profile/Profile'
 import Login from './components/Login/Login'
 import Signup from './components/SignUp/Signup'
 
-function App() {
+export default function App() {
   return (
     <div className="App">
       <Route
@@ -29,7 +29,7 @@ function App() {
         component={Signup}
       />
     </div>
-  );
+  )
 }
 
-export default App;
+

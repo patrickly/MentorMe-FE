@@ -17,6 +17,7 @@ html body {
   background: radial-gradient(#32599F, #013D63);
 }
 html body .App {
+  text-align: center;
   margin: 0 auto;
   color: #F2F2F2;
   font-family: 'Amatic SC', cursive;
@@ -65,6 +66,34 @@ html body .App input {
 html body .App Link:hover {
   text-decoration: none;
   color: red;
+}
+html body .App .heading {
+  margin-top: 70px;
+  margin-bottom: 50px;
+  font-size: 6rem;
+  color: #FBFBFB;
+}
+@media (min-width: 470px) {
+  html body .App .heading {
+    font-size: 8rem;
+  }
+}
+@media (min-width: 530px) {
+  html body .App .heading {
+    font-size: 10rem;
+  }
+}
+@media (min-width: 800px) {
+  html body .App .heading {
+    margin-top: 120px;
+    font-size: 12rem;
+  }
+}
+@media (min-width: 900px) {
+  html body .App .heading {
+    margin-top: 160px;
+    font-size: 14rem;
+  }
 }
 html body .App .green-btn {
   color: #42581A;
@@ -202,38 +231,88 @@ html body .App .red-btn:hover {
     margin-left: 0;
   }
 }
-.landing-wrapper {
-  text-align: center;
+.nav-wrapper nav {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row-reverse;
+  background: #013D63;
 }
-.landing-wrapper h1 {
-  margin-top: 70px;
-  margin-bottom: 50px;
-  font-size: 6rem;
+@media (max-width: 500px) {
+  .nav-wrapper nav {
+    flex-direction: column;
+  }
+  .nav-wrapper nav .burger-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+@media (min-width: 1000px) {
+  .nav-wrapper nav {
+    justify-content: space-between;
+  }
+}
+.nav-wrapper nav .burger {
+  display: none;
+  margin: 10px;
+}
+@media (max-width: 500px) {
+  .nav-wrapper nav .burger {
+    display: block;
+  }
+}
+.nav-wrapper nav .burger div {
+  width: 25px;
+  height: 3px;
+  background-color: #FBFBFB;
+  margin: 5px 0;
+}
+.nav-wrapper nav .burger2 {
+  display: none;
+  margin: 0 auto;
+}
+.nav-wrapper nav .burger2 div {
+  width: 200px;
+  height: 1px;
+  background-color: #FBFBFB;
+  margin: 5px 0;
+}
+.nav-wrapper nav .nav-links {
+  display: flex;
+}
+.nav-wrapper nav .nav-links div {
+  font-size: 2rem;
+  padding: 10px 15px;
   color: #FBFBFB;
-  -webkit-animation: header-animation 0.65s linear;
-  animation: header-animation 0.65s linear;
+  text-decoration: none;
 }
-@media (min-width: 470px) {
-  .landing-wrapper h1 {
-    font-size: 8rem;
+.nav-wrapper nav .nav-links div:hover {
+  color: #B2CEF1;
+  background: #1E62B9;
+}
+@media (max-width: 500px) {
+  .nav-wrapper nav .nav-links {
+    flex-direction: column;
+    display: none;
   }
 }
-@media (min-width: 530px) {
-  .landing-wrapper h1 {
-    font-size: 10rem;
-  }
+.nav-wrapper nav .nav-logo h3 {
+  padding: 10px 10px;
+  font-size: 3rem;
+  color: #FBFBFB;
 }
-@media (min-width: 800px) {
-  .landing-wrapper h1 {
-    margin-top: 120px;
-    font-size: 12rem;
-  }
+.nav-wrapper nav .nav-logo h3:hover {
+  text-decoration: none;
+  background: #1E62B9;
 }
-@media (min-width: 900px) {
-  .landing-wrapper h1 {
-    margin-top: 160px;
-    font-size: 14rem;
-  }
+.nav-wrapper nav .in-active {
+  display: none;
+}
+.nav-wrapper nav .active {
+  display: block;
+}
+.nav-wrapper nav .logo-center {
+  justify-content: center;
 }
 .landing-wrapper h4 {
   color: #D8E7F8;

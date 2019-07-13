@@ -8,11 +8,11 @@ class Signup extends React.Component {
         return (
             <div className='landing-wrapper'>
                 <Link to='/'>
-                    <h1>Welcome Back!</h1>
+                    <h1 className='heading'>MentorMe</h1>
                 </Link>
 
                 <div className='headline'>
-                    <h4>Please log-in here!</h4>
+                    <h4>Please sign up here!</h4>
                 </div>
 
                 <Form>
