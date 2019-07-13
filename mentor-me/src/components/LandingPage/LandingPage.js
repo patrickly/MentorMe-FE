@@ -6,7 +6,7 @@ const LandingPage = () => {
     return (
         <div className='landing-wrapper'>
             <Link to='/profile'>
-                <h1>MentorMe</h1>
+                <h1 className='heading'>MentorMe</h1>
             </Link>
 
             <div className='headline'>

@@ -7,6 +7,7 @@ html {
         // background: @DBG_5;
         background: radial-gradient(@DBL_4, @DBL_1);
         .App {
+            text-align: center;
             margin: 0 auto;
             color: @LBG_3;
             font-family: 'Amatic SC', cursive;
@@ -45,6 +46,26 @@ html {
                 &:hover {
                     text-decoration: none;
                     color: red;
+                }
+            }
+            .heading {
+                margin-top: 70px;
+                margin-bottom: 50px;
+                font-size: 6rem;
+                color: @LBG_2;
+                @media (min-width: 470px) {
+                    font-size: 8rem;
+                }
+                @media (min-width: 530px) {
+                    font-size: 10rem;
+                }
+                @media (min-width: 800px) {
+                    margin-top: 120px;
+                    font-size: 12rem;
+                }
+                @media (min-width: 900px) {
+                    margin-top: 160px;
+                    font-size: 14rem;
                 }
             }
             .green-btn {

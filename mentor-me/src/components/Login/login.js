@@ -8,7 +8,7 @@ class Login extends React.Component {
         return (
             <div className='landing-wrapper'>
                 <Link to='/'>
-                    <h1>Welcome Back!</h1>
+                    <h1 className='heading'>MentorMe</h1>
                 </Link>
 
                 <div className='headline'>
