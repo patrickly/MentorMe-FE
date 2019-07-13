@@ -247,6 +247,11 @@ html body .App .red-btn:hover {
     justify-content: space-between;
   }
 }
+@media (min-width: 500px) {
+  .nav-wrapper nav {
+    height: 50px;
+  }
+}
 @media (min-width: 1000px) {
   .nav-wrapper nav {
     justify-content: space-between;
@@ -297,7 +302,7 @@ html body .App .red-btn:hover {
   }
 }
 .nav-wrapper nav .nav-logo h3 {
-  padding: 10px 10px;
+  padding: 7px 10px;
   font-size: 3rem;
   color: #FBFBFB;
 }
