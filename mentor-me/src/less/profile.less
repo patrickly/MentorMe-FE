@@ -1,0 +1,35 @@
+.profile-wrapper {
+    .background-img {
+        position: relative;
+        top: 50px;
+        margin-bottom: 20px;
+        img {
+            width: 100%;
+        }
+        .about-txt {
+            position: absolute;
+            bottom: 20px;
+            color: @DBG_2;
+            width: 100%;
+            font-weight: bold;
+        }
+        .mentorship {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 25px;
+            background: @DBL_5;
+            h3 {
+                margin-top: 3px;
+                color: @LBL_2;
+                &:hover {
+                    color: @LBL_5;
+                }
+            }
+        }
+        @media (min-width: 500px) {
+            width: 500px;
+            margin: 0 auto;
+        }
+    }
+}

@@ -231,6 +231,12 @@ html body .App .red-btn:hover {
     margin-left: 0;
   }
 }
+.nav-wrapper {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 300;
+}
 .nav-wrapper nav {
   display: flex;
   justify-content: space-around;
@@ -370,5 +376,40 @@ html body .App .red-btn:hover {
 @media (min-width: 800px) {
   .landing-wrapper .login {
     margin-bottom: 180px;
+  }
+}
+.profile-wrapper .background-img {
+  position: relative;
+  top: 50px;
+  margin-bottom: 20px;
+}
+.profile-wrapper .background-img img {
+  width: 100%;
+}
+.profile-wrapper .background-img .about-txt {
+  position: absolute;
+  bottom: 20px;
+  color: #141414;
+  width: 100%;
+  font-weight: bold;
+}
+.profile-wrapper .background-img .mentorship {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 25px;
+  background: #1E62B9;
+}
+.profile-wrapper .background-img .mentorship h3 {
+  margin-top: 3px;
+  color: #D8E7F8;
+}
+.profile-wrapper .background-img .mentorship h3:hover {
+  color: #67A9ED;
+}
+@media (min-width: 500px) {
+  .profile-wrapper .background-img {
+    width: 500px;
+    margin: 0 auto;
   }
 }
