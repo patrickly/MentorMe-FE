@@ -4,7 +4,6 @@
 html {
     font-size: 62.5%;
     body {
-        // background: @DBG_5;
         background: radial-gradient(@DBL_4, @DBL_1);
         .App {
             text-align: center;
@@ -41,11 +40,13 @@ html {
                 text-align: center;
                 font-size: 2rem;
                 margin: 0 auto 10px auto;
+                @media (max-width: 300px) {
+                    width: 100%;
+                }
             }
-            Link {
+            a {
                 &:hover {
                     text-decoration: none;
-                    color: red;
                 }
             }
             .heading {
@@ -90,6 +91,11 @@ html {
                     border-color: @LRD_4;
                     -webkit-animation: red-btn-animation 0.4s linear;
                             animation: red-btn-animation 0.4s linear;
+                }
+            }
+            .link {
+                &:hover {
+                    text-decoration: none;
                 }
             }
 

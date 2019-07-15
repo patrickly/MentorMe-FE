@@ -63,9 +63,13 @@ html body .App input {
   font-size: 2rem;
   margin: 0 auto 10px auto;
 }
-html body .App Link:hover {
+@media (max-width: 300px) {
+  html body .App input {
+    width: 100%;
+  }
+}
+html body .App a:hover {
   text-decoration: none;
-  color: red;
 }
 html body .App .heading {
   margin-top: 70px;
@@ -118,6 +122,9 @@ html body .App .red-btn:hover {
   border-color: #DF6668;
   -webkit-animation: red-btn-animation 0.4s linear;
   animation: red-btn-animation 0.4s linear;
+}
+html body .App .link:hover {
+  text-decoration: none;
 }
 @-webkit-keyframes red-btn-animation {
   from {
@@ -385,6 +392,7 @@ html body .App .red-btn:hover {
 }
 .profile-wrapper .background-img img {
   width: 100%;
+  z-index: 250;
 }
 .profile-wrapper .background-img .about-txt {
   position: absolute;
@@ -400,16 +408,46 @@ html body .App .red-btn:hover {
   height: 25px;
   background: #1E62B9;
 }
+.profile-wrapper .background-img .mentorship:hover {
+  background: #AA4F04;
+}
 .profile-wrapper .background-img .mentorship h3 {
   margin-top: 3px;
   color: #D8E7F8;
 }
 .profile-wrapper .background-img .mentorship h3:hover {
-  color: #67A9ED;
+  color: #F7D9D9;
 }
 @media (min-width: 500px) {
   .profile-wrapper .background-img {
     width: 500px;
     margin: 0 auto;
   }
+}
+.profile-wrapper .profile-bar-wrapper {
+  display: flex;
+  margin-top: 30px;
+  background: #013D63;
+}
+.profile-wrapper .profile-bar-wrapper img {
+  width: 60px;
+  border-radius: 60px;
+  z-index: 200;
+}
+.profile-wrapper .profile-bar-wrapper .bar-info-wrapper {
+  margin: 20px 0 0 10px;
+  font-size: 1.2rem;
+  display: flex;
+}
+.profile-wrapper .profile-bar-wrapper .bar-info-wrapper div {
+  padding: 0 9px;
+}
+.profile-wrapper .profile-bar-wrapper .bar-info-wrapper div:hover {
+  background: #177F30;
+}
+.profile-wrapper .profile-bar-wrapper .bar-info-wrapper .about {
+  margin-bottom: 0;
+}
+.profile-wrapper .profile-bar-wrapper .bar-info-wrapper .about .about-text {
+  margin-top: 18px;
 }
