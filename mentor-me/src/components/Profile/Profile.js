@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom'
 import MenuNav from '../MenuNav/MenuNav'
 import TonyBG from '../../images/tony-bg.jpg'
-// import TonyProfile from '../../images/tony-profile.jpg'
+import ProfileBar from './ProfileBar'
 
 const Profile = () => {
     return (
@@ -19,20 +19,7 @@ const Profile = () => {
                     </Link>
                 </div>
             </div>
-            <div className='profile-nav'>
-                <p>Small Profile pic</p>
-                <p>About</p>
-                <p>Mentors/Menties</p>
-                <p>Reviews</p>
-                <p>Posts</p>
-
-                <p>Small Profile pic</p>
-                <p>About</p>
-                <p>Mentors/Menties</p>
-                <p>Reviews</p>
-                <p>Posts</p>
-            </div>
-            <div>Nav component info goes here...</div>
+            <ProfileBar />
         </div>
     )
 }

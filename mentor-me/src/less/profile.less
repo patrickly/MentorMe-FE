@@ -5,6 +5,7 @@
         margin-bottom: 20px;
         img {
             width: 100%;
+            z-index: 250;
         }
         .about-txt {
             position: absolute;
@@ -19,17 +20,48 @@
             width: 100%;
             height: 25px;
             background: @DBL_5;
+            &:hover {
+                background: @DYO_1;
+            }
             h3 {
                 margin-top: 3px;
                 color: @LBL_2;
                 &:hover {
-                    color: @LBL_5;
+                    color: @LRD_1;
                 }
             }
         }
         @media (min-width: 500px) {
             width: 500px;
             margin: 0 auto;
+        }
+    }
+    .profile-bar-wrapper {
+        display: flex;
+        margin-top: 30px;
+        background: @DBL_1;
+        img {
+            width: 60px;
+            border-radius: 60px;
+            z-index: 200;
+            // margin-bottom: 10px;
+        }
+        .bar-info-wrapper {
+            margin: 20px 0 0 10px;
+            font-size: 1.2rem;
+            display: flex;
+            div {
+                padding: 0 9px;
+                &:hover {
+                    background: @DGR_2;
+                }
+            }
+            .about {
+                margin-bottom: 0;
+                .about-text {
+                    margin-top: 18px;
+                }
+            }
         }
     }
 }
