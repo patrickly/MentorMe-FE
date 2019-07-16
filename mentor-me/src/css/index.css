@@ -426,6 +426,7 @@ html body .App .link:hover {
 }
 .profile-wrapper .profile-bar-wrapper {
   display: flex;
+  justify-content: center;
   margin-top: 30px;
   background: #013D63;
 }
