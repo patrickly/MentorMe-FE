@@ -1,27 +1,41 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
+// import { Button } from 'reactstrap'
 import MenuNav from '../MenuNav/MenuNav'
 import TonyBG from '../../images/tony-bg.jpg'
 import ProfileBar from './ProfileBar'
+// import { connect } from 'react-redux'
 
-const Profile = () => {
-    return (
-        <div className='profile-wrapper'>
-            <MenuNav />
-            <div className='background-img'>
-                <img src={TonyBG} alt='tony background' />
-                <div className='about-txt'>
-                    <p>Billionaire, Philanthropist, Superhero, Savior of the Universe</p>
+export default class Profile extends React.Component {
+    state = {
+        isLoggedIn: false,
+    }
+    toggle = this.toggle.bind(this)
+    toggle() {
+        this.setState({
+            isLoggedIn: !this.state.isLoggedIn
+        })
+        const user = this.state.username
+		localStorage.setItem('user', user)
+        window.location.reload()
+    }
+    render() {
+        return (
+            <div className='profile-wrapper'>
+                <MenuNav />
+                <div className='background-img'>
+                    <img src={TonyBG} alt='tony background' />
+                    <div className='about-txt'>
+                        <p>Billionaire, Philanthropist, Superhero, Savior of the Universe</p>
+                    </div>
+                    <div className='mentorship'>
+                        <Link to='/' onClick={this.toggle}>
+                            <h3>'Mentor Me/Be My Mentie bar</h3>
+                        </Link>
+                    </div>
                 </div>
-                <div className='mentorship'>
-                    <Link to='/'>
-                        <h3>'Mentor Me/Be My Menti' bar</h3>
-                    </Link>
-                </div>
+                <ProfileBar />
             </div>
-            <ProfileBar />
-        </div>
-    )
+        )
+    }
 }
-
-export default Profile

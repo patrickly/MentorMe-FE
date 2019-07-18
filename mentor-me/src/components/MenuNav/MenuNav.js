@@ -26,7 +26,9 @@ export default class MenuNav extends React.Component {
                             <div></div>
                         </div>
                         <div className='nav-logo'>
-                            <Link to='/'><h3>MentorMe</h3></Link>
+                            <Link to='/'>
+                                <h3>MentorMe</h3>
+                            </Link>
                         </div>
                     </div>
                     <div className={`burger2${this.state.isActive ? ' active' : ''}`}
@@ -38,7 +40,7 @@ export default class MenuNav extends React.Component {
                     </div>
                     <div className={`nav-links${this.state.isActive ? ' active' : ''}`}
                         isActive={this.state.isActive}
-                        onClick={this.toggle}>
+                        >
                         <Link to='/'><div>Home</div></Link>
                         <Link to='/'><div>Question Feed</div></Link>
                         <Link to='/'><div>Notifications</div></Link>
