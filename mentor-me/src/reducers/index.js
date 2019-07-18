@@ -20,6 +20,7 @@ const rootReducer = (state = initialState, action) => {
             return {
                 ...state,
                 isLoggingIn: true,
+                isLoggedIn: false,
                 error: "",
             }
         case LOGIN_SUCCESS:
@@ -28,6 +29,7 @@ const rootReducer = (state = initialState, action) => {
                 user: action.payload.user,
                 token: action.payload.data.token,
                 isLoggingIn: false,
+                isLoggedIn: true,
                 error: "",
             }
 
@@ -35,6 +37,7 @@ const rootReducer = (state = initialState, action) => {
             return {
                 ...state,
                 isLoggingIn: false,
+                isLoggedIn: false,
                 error: "FAILED to login",
             }
         default:
