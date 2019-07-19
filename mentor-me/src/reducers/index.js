@@ -2,6 +2,9 @@ import {
     LOGIN_START,
     LOGIN_SUCCESS,
     LOGIN_FAILURE,
+    REGISTER_START,
+    REGISTER_SUCCESS,
+    REGISTER_FAILURE,
 } from '../actions'
 import jwt from 'jsonwebtoken'
 
@@ -32,12 +35,28 @@ const rootReducer = (state = initialState, action) => {
                 isLoggedIn: true,
                 error: "",
             }
-
         case LOGIN_FAILURE:
             return {
                 ...state,
                 isLoggingIn: false,
                 isLoggedIn: false,
+                error: "FAILED to login",
+            }
+
+        case REGISTER_START:
+            return {
+                ...state,
+                error: "",
+            }
+        case REGISTER_SUCCESS:
+            return {
+                ...state,
+                user: action.payload.user,
+                error: "",
+            }
+        case REGISTER_FAILURE:
+            return {
+                ...state,
                 error: "FAILED to login",
             }
         default:

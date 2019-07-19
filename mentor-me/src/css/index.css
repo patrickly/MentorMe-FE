@@ -2,7 +2,7 @@
   font-family: 'Amatic SC';
   font-style: normal;
   font-weight: 400;
-  src: local('Amatic SC Regular'), local('AmaticSC-Regular'), url(https://fonts.gstatic.com/s/amaticsc/v12/TUZyzwprpvBS1izr_vOECuSa.ttf) format('truetype');
+  src: local('Amatic SC Regular'), local('AmaticSC-Regular'), url(https://fonts.gstatic.com/s/amaticsc/v13/TUZyzwprpvBS1izr_vOECuSa.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Aladin';
@@ -287,13 +287,19 @@ html body .App .link:hover {
 }
 .nav-wrapper nav .burger2 {
   display: none;
-  margin: 0 auto;
+  justify-content: center;
 }
-.nav-wrapper nav .burger2 div {
-  width: 200px;
+.nav-wrapper nav .burger2 .b2-wrapper {
+  display: flex;
+}
+.nav-wrapper nav .burger2 .line {
+  width: 80px;
   height: 1px;
   background-color: #FBFBFB;
-  margin: 5px 0;
+  margin: 10px 0 0 0;
+}
+.nav-wrapper nav .burger2 h3 {
+  font-size: 2rem;
 }
 .nav-wrapper nav .nav-links {
   display: flex;
@@ -327,7 +333,7 @@ html body .App .link:hover {
   display: none;
 }
 .nav-wrapper nav .active {
-  display: block;
+  display: flex;
 }
 .nav-wrapper nav .logo-center {
   justify-content: center;
@@ -451,4 +457,42 @@ html body .App .link:hover {
 }
 .profile-wrapper .profile-bar-wrapper .bar-info-wrapper .about .about-text {
   margin-top: 18px;
+}
+.convo-wrapper .convo-components {
+  margin-top: 55px;
+}
+.convo-wrapper .convo-components .convo-header-wrapper img {
+  width: 50px;
+  border-radius: 15px;
+  margin-top: 10px;
+}
+.convo-wrapper .convo-components .convo-box-wrapper {
+  margin-top: 0;
+  width: 98%;
+  height: 375px;
+  background: radial-gradient(#D8E7F8, #8AB7E9);
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.convo-wrapper .convo-components .convo-box-wrapper .tony {
+  background: #2A487F;
+  width: 75%;
+  text-align: left;
+  justify-content: flex-end;
+}
+.convo-wrapper .convo-components .convo-box-wrapper .tony .spacer {
+  width: 200px;
+}
+.convo-wrapper .convo-components .convo-box-wrapper .mentie {
+  width: 75%;
+}
+.convo-wrapper .convo-components .convo-type-wrapper {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+.convo-wrapper .convo-components .convo-type-wrapper input {
+  text-align: left;
 }

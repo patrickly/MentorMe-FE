@@ -5,7 +5,7 @@ import { Route } from 'react-router-dom'
 
 import LandingPage from './components/LandingPage/LandingPage'
 import Profile from './components/Profile/Profile'
-// import Authenticate from './components/Authentication/Authenticate'
+import Conversations from './components/Converstations/Conversations'
 import Login from './components/Login/Login'
 import Signup from './components/SignUp/Signup'
 import PrivateRoute from './components/PrivateRoute/PrivateRoute'
@@ -18,16 +18,7 @@ class App extends React.Component {
           path='/'
           exact
           component={LandingPage}
-          // component={ConditionalView}
         />
-        {/* <Route
-          path='/landing'
-          component={LandingPage}
-        /> */}
-        {/* <Route
-          path='/profile'
-          component={Profile}
-        /> */}
         <Route
           path='/login'
           render={props => (
@@ -36,18 +27,21 @@ class App extends React.Component {
         />
         <Route
           path='/signup'
-          component={Signup}
+          render={props => (
+            <Signup {...props} />
+          )}
         />
         <PrivateRoute
           path="/protected"
-          exact
           component={Profile}
+        />
+        <Route
+          path='/convo'
+          component={Conversations}
         />
 			</div>
 		);
 	}
 }
-
-// const ConditionalView = Authenticate(Profile)(LandingPage)
 
 export default App

@@ -1,4 +1,4 @@
-import React from 'react';
+import React  from 'react';
 import { Link } from 'react-router-dom'
 
 export default class MenuNav extends React.Component {
@@ -34,9 +34,12 @@ export default class MenuNav extends React.Component {
                     <div className={`burger2${this.state.isActive ? ' active' : ''}`}
                         isActive={this.state.isActive}
                         onClick={this.toggle}>
-                        <div></div>
-                        <div></div>
-                        <div></div>
+                        <div className='b2-wrapper'>
+                            <div className='line'></div>
+                            <h3>X</h3>
+                            <div className='line'></div>
+                        </div>
+
                     </div>
                     <div className={`nav-links${this.state.isActive ? ' active' : ''}`}
                         isActive={this.state.isActive}
