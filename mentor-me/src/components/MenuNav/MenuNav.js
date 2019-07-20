@@ -1,4 +1,4 @@
-import React from 'react';
+import React  from 'react';
 import { Link } from 'react-router-dom'
 
 export default class MenuNav extends React.Component {
@@ -26,19 +26,24 @@ export default class MenuNav extends React.Component {
                             <div></div>
                         </div>
                         <div className='nav-logo'>
-                            <Link to='/'><h3>MentorMe</h3></Link>
+                            <Link to='/'>
+                                <h3>MentorMe</h3>
+                            </Link>
                         </div>
                     </div>
                     <div className={`burger2${this.state.isActive ? ' active' : ''}`}
                         isActive={this.state.isActive}
                         onClick={this.toggle}>
-                        <div></div>
-                        <div></div>
-                        <div></div>
+                        <div className='b2-wrapper'>
+                            <div className='line'></div>
+                            <h3>X</h3>
+                            <div className='line'></div>
+                        </div>
+
                     </div>
                     <div className={`nav-links${this.state.isActive ? ' active' : ''}`}
                         isActive={this.state.isActive}
-                        onClick={this.toggle}>
+                        >
                         <Link to='/'><div>Home</div></Link>
                         <Link to='/'><div>Question Feed</div></Link>
                         <Link to='/'><div>Notifications</div></Link>

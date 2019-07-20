@@ -12,16 +12,16 @@ export default function ProfileBar() {
                     </div>
                 </div>
                 <div className='mentors'>
-                    <div className='number'>0</div>
-                    <div>Mentors</div>
-                </div>
-                <div className='menties'>
                     <div className='number'>42</div>
                     <div>Menties</div>
                 </div>
                 <div className='Posts'>
-                    <div className='number'>> 9,000</div>
+                    <div className='number'>9,001</div>
                     <div>Posts</div>
+                </div>
+                <div className='messages'>
+                    <div className='number'>42</div>
+                    <div>Messages</div>
                 </div>
             </div>
         </div>

@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 const LandingPage = () => {
     return (
         <div className='landing-wrapper'>
-            <Link to='/profile'>
+            <Link to='/'>
                 <h1 className='heading'>MentorMe</h1>
             </Link>
 
