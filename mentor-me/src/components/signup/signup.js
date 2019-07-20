@@ -16,6 +16,7 @@ class Signup extends React.Component {
                 age: '',
                 location: '',
                 phone_number: '',
+                business_type: '',
             }
         }
     }
@@ -32,7 +33,7 @@ class Signup extends React.Component {
         e.preventDefault()
         this.props
             .register(this.state.newUser)
-            .then(() => this.props.history.push('/login'))
+            .then(() => this.props.addedUser ? this.props.history.push('/login') : alert('User was not successfully added'))
     }
     render() {
         return (
@@ -81,6 +82,13 @@ class Signup extends React.Component {
                         placeholder='Phone number'
                         onChange={this.handleInputChange}>
                     </Input>
+                    <Input
+                        type='text'
+                        name='business_type'
+                        value={this.state.newUser.business_type}
+                        placeholder='Business type'
+                        onChange={this.handleInputChange}>
+                    </Input>
                     <Button className='green-btn'>Register</Button>
                 </Form>
             </div>
@@ -88,8 +96,10 @@ class Signup extends React.Component {
     }
 }
 
-const mapStateToProps = () => {
-    return {}
+const mapStateToProps =state => {
+    return {
+        addedUser: state.addedUser,
+    }
 }
 
 export default connect(
