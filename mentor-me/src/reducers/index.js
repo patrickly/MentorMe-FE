@@ -2,6 +2,9 @@ import {
     LOGIN_START,
     LOGIN_SUCCESS,
     LOGIN_FAILURE,
+    LOGOUT_START,
+    LOGOUT_SUCCESS,
+    LOGOUT_FAILURE,
     REGISTER_START,
     REGISTER_SUCCESS,
     REGISTER_FAILURE,
@@ -29,7 +32,7 @@ const initialState = {
     addingUser: false,
     deletingQuest: false,
     updatingQuest: false,
-    isLoggedIn: false,
+    isLoggedIn: !!localStorage.getItem('token'),
     isLoggingIn: false,
     token: localStorage.getItem('token'),
     user: jwt.decode(localStorage.getItem('token')),
@@ -63,7 +66,25 @@ const rootReducer = (state = initialState, action) => {
                 isLoggedIn: false,
                 error: "FAILED to login",
             }
-
+        // Log out
+        case LOGOUT_START:
+            return {
+                ...state,
+                error: "",
+            }
+        case LOGOUT_SUCCESS:
+            return {
+                ...state,
+                user: '',
+                token: '',
+                isLoggedIn: false,
+                error: "",
+            }
+        case LOGOUT_FAILURE:
+            return {
+                ...state,
+                error: "FAILED to logout",
+            }
         // Register
         case REGISTER_START:
             return {

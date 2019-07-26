@@ -48,6 +48,7 @@ export default class MenuNav extends React.Component {
                         <Link to='/'><div>Question Feed</div></Link>
                         <Link to='/'><div>Notifications</div></Link>
                         <Link to='/'><div>Messages</div></Link>
+                        <Link to='/Logout'><div>Logout</div></Link>
                     </div>
                 </nav>
             </div>
