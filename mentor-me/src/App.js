@@ -7,7 +7,7 @@ import LandingPage from './components/LandingPage/LandingPage'
 import Profile from './components/Profile/Profile'
 import Conversations from './components/Converstations/Conversations'
 import Login from './components/Login/Login'
-import Signup from './components/SignUp/Signup'
+import Signup from './components/SignUp/SignUp'
 import PrivateRoute from './components/PrivateRoute/PrivateRoute'
 
 // import { getUsers } from './actions'
