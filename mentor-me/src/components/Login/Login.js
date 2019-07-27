@@ -26,6 +26,7 @@ class Login extends React.Component {
 	}
 
 	handleLoginSubmit = e => {
+        console.log("token", localStorage.getItem('token'))
         e.preventDefault()
         this.props
             .login(this.state.credentials)
@@ -51,12 +52,12 @@ class Login extends React.Component {
                         onChange={this.handleInputChange}
                     />
                     <Input
-						type="password"
-						placeholder="Password"
-						name="password"
-						value={this.state.credentials.password}
-						onChange={this.handleInputChange}
-					/>
+            						type="password"
+            						placeholder="Password"
+            						name="password"
+            						value={this.state.credentials.password}
+            						onChange={this.handleInputChange}
+            					/>
                     <Button
                         className='red-btn'
                         onClick={this.handleLoginSubmit}
