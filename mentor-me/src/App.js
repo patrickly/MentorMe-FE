@@ -7,8 +7,10 @@ import LandingPage from './components/LandingPage/LandingPage'
 import Profile from './components/Profile/Profile'
 import Conversations from './components/Converstations/Conversations'
 import Login from './components/Login/Login'
-import Signup from './components/SignUp/Signup'
+import Logout from './components/Logout/Logout'
+import Signup from './components/SignUp/SignUp'
 import PrivateRoute from './components/PrivateRoute/PrivateRoute'
+import PublicRoute from './components/PublicRoute/PublicRoute'
 
 // import { getUsers } from './actions'
 // import { connect } from 'react-redux'
@@ -20,28 +22,28 @@ class App extends React.Component {
 	render() {
 		return (
 			<div className="App">
-        <Route
+        <PublicRoute
           path='/'
           exact
-          component={LandingPage}
+					component={LandingPage}
         />
-        <Route
+        <PublicRoute
           path='/login'
-          render={props => (
-            <Login {...props} />
-          )}
+          component={Login}
         />
-        <Route
-          path='/signup'
-          render={props => (
-            <Signup {...props} />
-          )}
-        />
+				<PublicRoute
+					path='/signup'
+					component={Signup}
+				/>
+				<PrivateRoute
+					path="/logout"
+					component={Logout}
+				/>
         <PrivateRoute
           path="/protected"
           component={Profile}
         />
-        <Route
+        <PrivateRoute
           path='/convo'
           component={Conversations}
         />
